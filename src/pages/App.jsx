@@ -35,21 +35,22 @@ const App = () => {
 
   return (
     <div id="popup-root">
-      <div className="qrcode">
-        <div className="qrcode-container">
-          <div id="qrcode" ref={qrCodeRef}>
-            <QRCode value={tabLink} size={qrSize} />
+      <div className="qrcode-root">
+        <div className="qrcode">
+          <div className="qrcode-container">
+            <div id="qrcode" ref={qrCodeRef}>
+              <QRCode value={tabLink} size={qrSize} bgColor={"#212529"} fgColor={"#ffffff"} />
+            </div>
           </div>
         </div>
       </div>
-      <div className="link-text">{tabLink}</div>
-      <div className="btn-group">
-        <button className="appreciate-btn">
-          <span>设置</span>
-        </button>
-        <button id="change-color-btn" onClick={handleCopyLink}>
-          复制链接
-        </button>
+      <div className="link-root">
+        <div className="link-text">{tabLink}</div>
+        <div className="btn-group">
+          <button id="change-color-btn" onClick={handleCopyLink}>
+            复制链接
+          </button>
+        </div>
       </div>
 
       <div

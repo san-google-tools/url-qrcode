@@ -1,7 +1,6 @@
 {
   "name": "San QRCode Gene",
   "manifest_version": 3,
-
   "background": {
     "service_worker": "server.js",
     "type": "module"
@@ -12,6 +11,11 @@
       "matches": ["https://*/*", "http://*/*"]
     }
   ],
+  "icons": {
+    "16": "images/qr_code_icon_32.png",
+    "48": "images/qr_code_icon_48.png",
+    "64": "images/qr_code_icon_64.png"
+  },
   "action": {
     "default_popup": "popup.html"
   }
